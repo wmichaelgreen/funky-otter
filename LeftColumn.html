@@ -1,42 +1,37 @@
 <ac:templateoverridearea id="LeftColumn">
-  <ac:widgetarea id="CategoryLeftTop">
-</ac:widgetarea>
+  <ac:widgetarea id="CategoryLeftTop"></ac:widgetarea>
   $$LEFTCOLUMN$$
-  <ac:widgetarea id="CategoryLeftBottom">
-</ac:widgetarea>
+  <ac:widgetarea id="CategoryLeftBottom"></ac:widgetarea>
 </ac:templateoverridearea>
 <ac:templateoverridearea id="RightColumn">
-  <ac:widgetarea id="CategoryRightTop">
-</ac:widgetarea>
+  <ac:widgetarea id="CategoryRightTop"></ac:widgetarea>
   $$RIGHTCOLUMN$$
-  <ac:widgetarea id="CategoryRightBottom">
-</ac:widgetarea>
+  <ac:widgetarea id="CategoryRightBottom"></ac:widgetarea>
 </ac:templateoverridearea>
 <ac:pagelayout id="CategoryPage" resizeproductthumb="True" productpicwidth="" productsperrow="4" sizeproportionally="True" layoutstyle="Horizontal" pagingtype="NumberedPageLinks" productpicheight="250" displaysortbox="True" pagesize="12">
-  
+
   <div class="breadcrumb" itemprop="breadcrumb">$$CATEGORYTRAIL$$</div>
   <div class="page-header">
     <h1 class="CategoryCategoryName">$$CATEGORYNAME$$</h1>
   </div>
-  
-  <ac:widgetarea id="Top">
-<ac:widget id="CATEGORYNAVIGATIONLINKS3083" type="CategoryNavigationLinks">
 
-  <ac:visibilityarea id="dvControl">
-    
-    <ul class="nav nav-stacked nav-pills">
-      <li><strong>$$HEADER$$</strong></li>
-      <ac:layoutarea id="Item">
-        <li><a class="category-link" href="$$CATEGORYHREF$$">
-          <!--$$CATEGORYICON$$-->
-          $$CATEGORYNAME$$
-          </a>
-        </li>
-      </ac:layoutarea>
-    </ul>
-  </ac:visibilityarea>
+  <ac:widgetarea id="Top"><ac:widget id="CATEGORYNAVIGATIONLINKS3083" type="CategoryNavigationLinks">
 
-</ac:widget>
+    <ac:visibilityarea id="dvControl">
+
+      <ul class="nav nav-stacked nav-pills">
+        <li><strong>$$HEADER$$</strong></li>
+        <ac:layoutarea id="Item">
+          <li><a class="category-link" href="$$CATEGORYHREF$$">
+            <!--$$CATEGORYICON$$-->
+            $$CATEGORYNAME$$
+            </a>
+          </li>
+        </ac:layoutarea>
+      </ul>
+    </ac:visibilityarea>
+
+    </ac:widget>
 </ac:widgetarea>
   <div>$$CATEGORYHEADER$$</div>
   $$TOPCATEGORYSPECIFICWIDGETAREA$$
@@ -47,9 +42,10 @@
     <ul class="nav nav-pills clearfix">
       <ac:layoutarea id="ChildCategoriesList">
         <li class="CategoryChildCategories">
-          <!--<div class="CategoryCategoryThumbnail">
-$$CATEGORYTHUMBNAIL$$
-</div>-->
+          <div class="CategoryCategoryThumbnail">
+            $$CATEGORYTHUMBNAIL$$
+            ##STORENAME##
+          </div>
           $$CATEGORYLINK$$
           <!--<div class="CategoryChildCategoriesShortDesc">
 $$CATEGORYSHORTDESCRIPTION$$
@@ -65,7 +61,7 @@ $$CATEGORYSHORTDESCRIPTION$$
       <div class="in-block v-mid pad-r-20 pad-t-5">$$PRODUCTCOUNTTOP$$</div>
       <div class="in-block v-mid pad-r-20">$$SORTBYDROPDOWN$$</div>
       <div class="in-block v-mid pad-r-20">$$NUMBERPERPAGEDROPDOWNLABEL$$ $$SHOWBYPAGESIZE$$</div>    
-      
+
       <div class="f-right">
         <div class="btn-group">
           <!--<button class="btn btn-default layout-grid icon-th size-big"></button>-->
@@ -74,7 +70,7 @@ $$CATEGORYSHORTDESCRIPTION$$
       </div>
     </div>    
   </ac:visibilityarea>
-  
+
   <ac:layoutarea id="ProductListLayout">
     <div class="product-list">$$GROUP$$</div>
   </ac:layoutarea>
@@ -101,12 +97,12 @@ $$CATEGORYSHORTDESCRIPTION$$
         <ac:visibilityarea id="Flag3">
           <div class="abs product-flag right bottom flag3"><span>Sale!</span></div>
         </ac:visibilityarea>
-        
+
       </a>
       <div class="caption center lh-15">
         <div class="f-right list-view-only">
-          
-          
+
+
           <ac:visibilityarea id="AddToCartArea">
             <div class="CategoryProductAddToCart">
               <div style="width:90px;" class="full-input in-block">$$QUANTITYBOX$$</div>
@@ -121,7 +117,7 @@ $$CATEGORYSHORTDESCRIPTION$$
               <div class="text-muted list-view-only size-small"><del>$$RETAILPRICE$$</del></div>
             </div>
           </ac:visibilityarea>
-          
+
           <ac:visibilityarea id="ltrWasPrice">
             <div class="CategoryWasPriceArea in-block">
               <div class="text-muted list-view-only size-small"><del>$$WASPRICE$$</del></div>
@@ -132,7 +128,7 @@ $$CATEGORYSHORTDESCRIPTION$$
           </ac:visibilityarea>
         </div>
         <ac:visibilityarea id="ProductRatingArea">
-          
+
           <div class="CategoryProductReview center">
             <div class="in-block v-mid">$$AVERAGEREVIEWRATINGSTARS$$</div> ##IF[ReviewCount!=0]## <div class="v-mid in-block">(##REVIEWCOUNT##)</div> ##ENDIF##
           </div>
@@ -143,23 +139,23 @@ $$CATEGORYSHORTDESCRIPTION$$
               $$AVAILABILITY$$
             </div>
           </ac:visibilityarea>
-          
-          
+
+
           <ac:visibilityarea id="MapPricingLink">
             <div class="CategoryMapPricingArea">
               $$MAPPRICINGLINK$$
             </div>
           </ac:visibilityarea>
-          
-          
+
+
           <ac:visibilityarea id="hlMfgLink">
             <span class="CategoryProductMfgName">$$MANUFACTURERLINK$$</span>
           </ac:visibilityarea>
-          
+
           <ac:visibilityarea id="lblItemNr">
             $$ITEMNUMBER$$
           </ac:visibilityarea>
-          
+
           <ac:visibilityarea id="rpDiscountList">
             $$DISCOUNTLIST$$
           </ac:visibilityarea>
@@ -168,9 +164,9 @@ $$CATEGORYSHORTDESCRIPTION$$
           </div>
         </div>
       </div>  
-      
+
     </div>
-    
+
   </ac:layoutarea>
   <script>
     $(function(){
@@ -190,10 +186,9 @@ $$CATEGORYSHORTDESCRIPTION$$
       </ac:layoutarea>   
     </div>  
   </ac:visibilityarea>
-  
+
   <div>$$CATEGORYFOOTER$$</div>
   $$BOTTOMATTRIBUTESPECIFICWIDGETAREA$$
   $$BOTTOMCATEGORYSPECIFICWIDGETAREA$$
-  <ac:widgetarea id="Bottom">
-</ac:widgetarea>
+  <ac:widgetarea id="Bottom"></ac:widgetarea>
 </ac:pagelayout>

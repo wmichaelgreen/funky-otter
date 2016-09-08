@@ -1,7 +1,7 @@
 <ac:pagelayout id="HeaderPage">
   <div class="LayoutTopTop">
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-3">
         <ac:widgetarea id="TopLeftHeader">
 <ac:widget id="HTML2992" type="HTML">
             <div class="no-m-t h1 sm-center">
@@ -22,27 +22,8 @@
           </ac:widget>
 </ac:widgetarea>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-9">
         <ac:widgetarea id="TopRightHeader">
-<ac:widget id="HTML2994" type="HTML">
-            <div class="no-m-b right sm-center">
-              <ac:if setting="Show Phone Number in Header">
-                <div><strong>##STOREPHONE##</strong></div>              
-              </ac:if>
-              <ac:if setting="Show Email Address in Header">
-                <div><abbr title="email">E:</abbr> <a class="inherit no-ul color-inherit" href="mailto:##STOREEMAIL##">##STOREEMAIL##</a></div>
-              </ac:if>
-              <ac:if setting="Show Search as Dropdown">
-                <ac:else>
-                  ##SEARCHBOX##
-                </ac:else>
-              </ac:if>
-            </div>
-          </ac:widget>
-</ac:widgetarea>
-      </div>
-    </div>
-    <ac:widgetarea id="TopHeaderWidgets">
 <ac:widget id="MENUBAR2988" type="MenuBar" linkgroupid="1">
         <ac:visibilityarea id="dvControl">
           $$ADMINHELP$$
@@ -160,6 +141,11 @@
           </ac:layoutarea>
         </ac:visibilityarea>
       </ac:widget>
+</ac:widgetarea>
+      </div>
+    </div>
+    <ac:widgetarea id="TopHeaderWidgets">
+
 <ac:widget id="CUSTOMERLOGIN2989" type="CustomerLogin" enablemergecode="True">
         <ac:visibilityarea id="LoggedOut">
           <li>
